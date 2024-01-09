@@ -1,6 +1,17 @@
 {
-    "idSave": 1,
+    "idSave": 2306,
     "isFirstSession": false,
     "language": "ru",
-    "promptDone": false
+    "promptDone": false,
+    "gameData": {
+        "PlayerInfo": {
+            "money": 383,
+            "perTap": 7,
+            "autoClick": 8,
+            "musicEnabled": true
+        },
+        "ShopInfo": {
+            "censorshipCount": 3
+        }
+    }
 }

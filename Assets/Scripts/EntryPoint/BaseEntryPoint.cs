@@ -6,7 +6,6 @@ public class BaseEntryPoint : MonoBehaviour
     [SerializeField] private MonoBehaviour[] _controllers;
     private List<IInitialize> _inits = new();
     private EventBus _bus;
-    protected IModel Model { get; set; }
     protected EventBus Bus => _bus;
     protected IReadOnlyList<IInitialize> Inits => _inits; 
     private void OnValidate()

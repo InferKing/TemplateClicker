@@ -7,7 +7,6 @@ using UnityEngine;
 public class EventBus : IService
 {
     private Dictionary<string, List<CallbackWithPriority>> _signalCallbacks = new();
-    public EventBus() { }
     public void Subscribe<T>(Action<T> callback, int priority = 0)
     {
         string key = typeof(T).Name;
@@ -49,7 +48,9 @@ public class EventBus : IService
         }
         else
         {
+#if UNITY_EDITOR
             Debug.LogErrorFormat("Trying to unsubscribe for not existing key! {0} ", key);
+#endif
         }
     }
 }
